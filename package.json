@@ -7,7 +7,8 @@
     "build": "tsc",
     "start": "ts-node src/index.ts",
     "dev": "nodemon src/index.ts",
-    "vercel-build":""
+    "vercel-build": "",
+    "postinstall": "prisma generate"  
   },
   "keywords": [],
   "author": "",
