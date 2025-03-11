@@ -1,17 +1,19 @@
-import { PrismaClient } from "@prisma/client";
 import express, { Application } from "express";
+import { logMiddleware } from "./middleware/log.middleware";
+import { routeMiddleware } from "./middleware/route.middleware";
+import { errorMiddleware } from "./middleware/error.middleware";
+import { CategoryRouter } from "./api/category/category.route";
 
 const app: Application = express();
-const prisma = new PrismaClient();
+
+app.use(express.json());
+
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
-
-app.get("/api", (req, res) => {
-  res.json({ message: "API endpoint is working" });
-});
-app.get("/api/users", async (req, res) => {
-  const response = await prisma.user.findMany();
-  res.json(response);
-});
+app.use(logMiddleware);
+//can declare routing here
+app.use(CategoryRouter);
+app.use(errorMiddleware);
+app.use(routeMiddleware);
 export default app;
