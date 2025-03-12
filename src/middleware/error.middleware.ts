@@ -10,14 +10,34 @@ export const errorMiddleware = (
   res: Response,
   next: NextFunction
 ) => {
-  logger.error(error);
   if (error instanceof ZodError) {
-    const messages = error.issues.map((issue) => issue.message);
-    res.status(400).json({
-      success: false,
-      statusCode: 400,
-      message: `Validation Error : ${messages}`,
-    });
+    logger.error(
+      "Validation Error:",
+      error.issues.map((issue) => ({
+        code: issue.code,
+        path: issue.path,
+        message: issue.message,
+      }))
+    );
+    const hasUnrecognizedKeys = error.issues.some(
+      (issue) => issue.code === "unrecognized_keys"
+    );
+    if (hasUnrecognizedKeys) {
+      res.status(400).json({
+        success: false,
+        statusCode: 400,
+        message: "Invalid query parameters: Unrecognized keys are not allowed.",
+      });
+    } else {
+      const errorMessages = error.issues.map(
+        (issue) => `${issue.path.join(".")}: ${issue.message}`
+      );
+      res.status(400).json({
+        success: false,
+        statusCode: 400,
+        message: `Validation Error: ${errorMessages.join("; ")}`,
+      });
+    }
   } else if (error instanceof Prisma.PrismaClientUnknownRequestError) {
     res.status(500).json({
       success: false,

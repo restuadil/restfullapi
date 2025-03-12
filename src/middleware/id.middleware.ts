@@ -9,7 +9,11 @@ const objectIdSchema = z
   });
 
 // Middleware untuk validasi ID
-export const validateId = (req: Request, res: Response, next: NextFunction) => {
+export const validateIdMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   const id = req.params.id; // Ambil ID dari parameter route
 
   try {
