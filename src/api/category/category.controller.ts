@@ -33,18 +33,36 @@ export const CategoryController = {
   },
   create: async (req: Request, res: Response, next: NextFunction) => {
     try {
+      const response = await CategoryService.create(req.body);
+      res.status(201).json({
+        status: true,
+        statusCode: 201,
+        data: response,
+      });
     } catch (error) {
       next(error);
     }
   },
   update: async (req: Request, res: Response, next: NextFunction) => {
     try {
+      const response = await CategoryService.update(req.params.id, req.body);
+      res.status(200).json({
+        status: true,
+        statusCode: 200,
+        data: response,
+      });
     } catch (error) {
       next(error);
     }
   },
   delete: async (req: Request, res: Response, next: NextFunction) => {
     try {
+      const response = await CategoryService.delete(req.params.id);
+      res.status(200).json({
+        status: true,
+        statusCode: 200,
+        data: response,
+      });
     } catch (error) {
       next(error);
     }
