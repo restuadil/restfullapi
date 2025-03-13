@@ -11,7 +11,7 @@ export const ProductValidation = {
     stock: z.number().min(0, { message: "stock must be positive number" }),
     images: z
       .string()
-      .url({ message: "Images must be valid URLs" })
+      .url({ message: "Images must be valid urls" })
       .array()
       .nonempty({ message: "At least one image is required" }),
     categoryIds: z
