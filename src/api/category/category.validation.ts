@@ -3,11 +3,9 @@ import { z } from "zod";
 export const CategoryValidation = {
   CREATE: z.object({
     name: z.string().min(3).max(50),
-    description: z.string().min(1).max(255),
   }),
   UPDATE: z.object({
     name: z.string().min(3).max(50),
-    description: z.string().min(1).max(255),
   }),
   QUERY: z
     .object({

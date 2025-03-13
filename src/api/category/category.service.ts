@@ -28,6 +28,10 @@ export const CategoryService = {
     const pagination = calculatePagination(totalCount, page, limit);
 
     const response = await prisma.category.findMany({
+      select: {
+        id: true,
+        name: true,
+      },
       where,
       skip: (page - 1) * limit,
       take: limit,
