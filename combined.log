@@ -101,3 +101,434 @@ Inconsistent column data: Malformed ObjectID: provided hex string representation
 2025-03-11T06:21:19.161Z INFO: Server is running on port localhost:8080
 2025-03-11T06:21:44.082Z INFO: Server is running on port localhost:8080
 2025-03-11T06:21:46.735Z INFO: GET /category/67cfd57015ea58d3406b72d
+2025-03-11T06:37:40.603Z INFO: Server is running on port localhost:8080
+2025-03-11T06:37:43.590Z INFO: GET /category/67cfd57015ea58d3406b72d
+2025-03-11T06:37:53.112Z INFO: GET /category?search=1
+2025-03-11T06:37:57.136Z INFO: GET /category?search=2
+2025-03-11T06:38:01.512Z INFO: GET /category?search=casadasda
+2025-03-11T06:39:03.800Z INFO: Server is running on port localhost:8080
+2025-03-11T06:39:17.544Z INFO: Server is running on port localhost:8080
+2025-03-11T06:39:17.686Z INFO: GET /category?search=casadasda
+2025-03-11T06:39:18.260Z ERROR: data not found
+2025-03-11T06:39:28.912Z INFO: GET /category?search=1
+2025-03-11T06:41:01.956Z INFO: Server is running on port localhost:8080
+2025-03-12T05:09:37.232Z INFO: Server is running on port localhost:8080
+2025-03-12T05:09:55.208Z INFO: GET /category
+2025-03-12T05:10:10.221Z INFO: GET /category?page=20
+2025-03-12T05:11:06.031Z INFO: Server is running on port localhost:8080
+2025-03-12T05:11:14.076Z INFO: Server is running on port localhost:8080
+2025-03-12T05:11:45.973Z INFO: Server is running on port localhost:8080
+2025-03-12T05:11:48.604Z INFO: GET /category?page=20
+2025-03-12T05:11:48.954Z ERROR: data not found
+2025-03-12T05:11:59.913Z INFO: GET /category
+2025-03-12T05:11:59.933Z ERROR: data not found
+2025-03-12T05:12:01.214Z INFO: GET /category
+2025-03-12T05:12:01.233Z ERROR: data not found
+2025-03-12T05:12:58.405Z INFO: Server is running on port localhost:8080
+2025-03-12T05:13:00.160Z INFO: GET /category
+2025-03-12T05:13:00.163Z ERROR: [
+  {
+    "code": "too_small",
+    "minimum": 0,
+    "type": "number",
+    "inclusive": false,
+    "exact": false,
+    "message": "Number must be greater than 0",
+    "path": [
+      "page"
+    ]
+  }
+]
+2025-03-12T05:13:08.612Z INFO: Server is running on port localhost:8080
+2025-03-12T05:13:28.762Z INFO: Server is running on port localhost:8080
+2025-03-12T05:13:29.557Z INFO: GET /category
+2025-03-12T05:13:34.381Z INFO: GET /category?page=3
+2025-03-12T05:14:19.547Z INFO: Server is running on port localhost:8080
+2025-03-12T05:14:35.275Z INFO: Server is running on port localhost:8080
+2025-03-12T05:14:37.944Z INFO: GET /category?page=3
+2025-03-12T05:14:57.673Z INFO: Server is running on port localhost:8080
+2025-03-12T05:14:58.682Z INFO: GET /category?page=3
+2025-03-12T05:15:05.350Z INFO: Server is running on port localhost:8080
+2025-03-12T05:34:30.908Z INFO: GET /category?page=3
+2025-03-12T05:37:00.857Z INFO: Server is running on port localhost:8080
+2025-03-12T05:37:01.297Z INFO: GET /category?page=3
+2025-03-12T05:37:03.218Z INFO: GET /category?page=3
+2025-03-12T05:37:04.104Z INFO: GET /category?page=3
+2025-03-12T05:37:14.016Z INFO: Server is running on port localhost:8080
+2025-03-12T05:37:19.238Z INFO: GET /category?page=3
+2025-03-12T05:38:29.022Z INFO: Server is running on port localhost:8080
+2025-03-12T05:38:37.076Z INFO: Server is running on port localhost:8080
+2025-03-12T05:38:47.579Z INFO: Server is running on port localhost:8080
+2025-03-12T05:39:08.752Z INFO: Server is running on port localhost:8080
+2025-03-12T05:39:14.134Z INFO: GET /category?page=3
+2025-03-12T05:39:14.754Z ERROR: No data available on page 3
+2025-03-12T05:39:18.818Z INFO: GET /category?page=1
+2025-03-12T05:39:26.363Z INFO: GET /category?page=1&limit=1
+2025-03-12T05:39:34.124Z INFO: GET /category?page=1&limit=40
+2025-03-12T05:40:46.611Z INFO: Server is running on port localhost:8080
+2025-03-12T05:40:49.388Z INFO: GET /category?page=1&limit=200
+2025-03-12T05:40:49.391Z ERROR: [
+  {
+    "code": "too_big",
+    "maximum": 100,
+    "type": "number",
+    "inclusive": true,
+    "exact": false,
+    "message": "Number must be less than or equal to 100",
+    "path": [
+      "limit"
+    ]
+  }
+]
+2025-03-12T05:42:07.574Z INFO: Server is running on port localhost:8080
+2025-03-12T05:42:09.668Z INFO: GET /category?page=1&limit=200
+2025-03-12T05:42:09.671Z ERROR: [
+  {
+    "code": "too_big",
+    "maximum": 100,
+    "type": "number",
+    "inclusive": true,
+    "exact": false,
+    "message": "Number must be less than or equal to 100",
+    "path": [
+      "limit"
+    ]
+  }
+]
+2025-03-12T05:42:10.820Z INFO: GET /category?page=1&limit=200
+2025-03-12T05:42:10.821Z ERROR: [
+  {
+    "code": "too_big",
+    "maximum": 100,
+    "type": "number",
+    "inclusive": true,
+    "exact": false,
+    "message": "Number must be less than or equal to 100",
+    "path": [
+      "limit"
+    ]
+  }
+]
+2025-03-12T05:43:06.717Z INFO: Server is running on port localhost:8080
+2025-03-12T05:43:09.054Z INFO: GET /category?page=1&limit=200
+2025-03-12T05:43:09.056Z ERROR: [
+  {
+    "code": "too_big",
+    "maximum": 100,
+    "type": "number",
+    "inclusive": true,
+    "exact": false,
+    "message": "Number must be less than or equal to 100",
+    "path": [
+      "limit"
+    ]
+  }
+]
+2025-03-12T05:43:54.429Z INFO: Server is running on port localhost:8080
+2025-03-12T05:44:30.072Z INFO: Server is running on port localhost:8080
+2025-03-12T05:44:35.422Z INFO: GET /category?page=1&limit=200
+2025-03-12T05:44:35.430Z ERROR: [
+  {
+    "code": "too_big",
+    "maximum": 100,
+    "type": "number",
+    "inclusive": true,
+    "exact": false,
+    "message": "Number must be less than or equal to 100",
+    "path": [
+      "limit"
+    ]
+  }
+]
+2025-03-12T06:03:41.231Z INFO: Server is running on port localhost:8080
+2025-03-12T06:04:42.684Z INFO: GET /category
+2025-03-12T06:05:36.491Z INFO: POST /category
+2025-03-12T06:05:39.872Z INFO: POST /category
+2025-03-12T06:05:39.907Z ERROR: Category already exists
+2025-03-12T06:05:44.637Z INFO: GET /category
+2025-03-12T06:05:51.236Z INFO: GET /category/67cfd57015ea58d3406b72df
+2025-03-12T06:05:56.878Z INFO: GET /category
+2025-03-12T06:06:03.870Z INFO: GET /category/s
+2025-03-12T06:06:07.715Z INFO: GET /categorye
+2025-03-12T06:06:07.716Z ERROR: Route : /categorye is not a valid
+2025-03-12T06:06:09.677Z INFO: GET /category
+2025-03-12T06:06:14.372Z INFO: GET /category/page=4
+2025-03-12T06:06:25.095Z INFO: GET /category?pahe=2
+2025-03-12T06:06:41.590Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:08:14.646Z INFO: Server is running on port localhost:8080
+2025-03-12T06:08:17.064Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:08:17.066Z ERROR: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "kdjaksjdkas"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'kdjaksjdkas'"
+  }
+]
+2025-03-12T06:09:41.567Z INFO: Server is running on port localhost:8080
+2025-03-12T06:09:58.378Z INFO: Server is running on port localhost:8080
+2025-03-12T06:10:09.969Z INFO: Server is running on port localhost:8080
+2025-03-12T06:10:27.509Z INFO: Server is running on port localhost:8080
+2025-03-12T06:10:37.049Z INFO: Server is running on port localhost:8080
+2025-03-12T06:10:47.432Z INFO: Server is running on port localhost:8080
+2025-03-12T06:10:56.914Z INFO: Server is running on port localhost:8080
+2025-03-12T06:11:32.798Z INFO: Server is running on port localhost:8080
+2025-03-12T06:11:36.220Z INFO: Server is running on port localhost:8080
+2025-03-12T06:11:43.842Z INFO: Server is running on port localhost:8080
+2025-03-12T06:13:12.663Z INFO: Server is running on port localhost:8080
+2025-03-12T06:13:30.731Z INFO: Server is running on port localhost:8080
+2025-03-12T06:13:45.918Z INFO: Server is running on port localhost:8080
+2025-03-12T06:13:56.023Z INFO: Server is running on port localhost:8080
+2025-03-12T06:14:02.116Z INFO: Server is running on port localhost:8080
+2025-03-12T06:14:10.952Z INFO: Server is running on port localhost:8080
+2025-03-12T06:14:20.494Z INFO: Server is running on port localhost:8080
+2025-03-12T06:14:39.859Z INFO: Server is running on port localhost:8080
+2025-03-12T06:15:05.676Z INFO: Server is running on port localhost:8080
+2025-03-12T06:15:19.759Z INFO: Server is running on port localhost:8080
+2025-03-12T06:24:27.262Z INFO: Server is running on port localhost:8080
+2025-03-12T06:24:30.205Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:27:51.227Z INFO: Server is running on port localhost:8080
+2025-03-12T06:28:20.663Z INFO: Server is running on port localhost:8080
+2025-03-12T06:30:44.074Z INFO: Server is running on port localhost:8080
+2025-03-12T06:31:55.585Z INFO: Server is running on port localhost:8080
+2025-03-12T06:32:40.180Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:32:40.183Z ERROR: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "kdjaksjdkas"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'kdjaksjdkas'"
+  }
+]
+2025-03-12T06:33:27.892Z INFO: Server is running on port localhost:8080
+2025-03-12T06:34:06.585Z INFO: Server is running on port localhost:8080
+2025-03-12T06:34:10.952Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:34:10.955Z ERROR: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "kdjaksjdkas"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'kdjaksjdkas'"
+  }
+]
+2025-03-12T06:34:26.887Z INFO: Server is running on port localhost:8080
+2025-03-12T06:34:28.428Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:34:28.453Z ERROR: ZodError: [
+  {
+    "code": "unrecognized_keys",
+    "keys": [
+      "kdjaksjdkas"
+    ],
+    "path": [],
+    "message": "Unrecognized key(s) in object: 'kdjaksjdkas'"
+  }
+]
+    at Object.get error [as error] (E:\Code\Express\express-restapi\node_modules\zod\lib\types.js:55:31)
+    at ZodObject.parse (E:\Code\Express\express-restapi\node_modules\zod\lib\types.js:131:22)
+    at Function.validate (E:\Code\Express\express-restapi\src\utils\validation.ts:5:19)
+    at Object.get (E:\Code\Express\express-restapi\src\api\category\category.service.ts:16:39)
+    at get (E:\Code\Express\express-restapi\src\api\category\category.controller.ts:14:48)
+    at Layer.handle [as handle_request] (E:\Code\Express\express-restapi\node_modules\express\lib\router\layer.js:95:5)
+    at next (E:\Code\Express\express-restapi\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (E:\Code\Express\express-restapi\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (E:\Code\Express\express-restapi\node_modules\express\lib\router\layer.js:95:5)
+    at E:\Code\Express\express-restapi\node_modules\express\lib\router\index.js:284:15
+2025-03-12T06:34:56.180Z INFO: Server is running on port localhost:8080
+2025-03-12T06:34:58.078Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:34:58.082Z ERROR: [object Object]
+2025-03-12T06:35:09.030Z INFO: Server is running on port localhost:8080
+2025-03-12T06:35:27.404Z INFO: Server is running on port localhost:8080
+2025-03-12T06:35:28.604Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:35:28.607Z ERROR: [object Object]
+2025-03-12T06:35:56.832Z INFO: Server is running on port localhost:8080
+2025-03-12T06:36:01.332Z INFO: Server is running on port localhost:8080
+2025-03-12T06:36:02.625Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:36:02.627Z ERROR: [object Object]
+2025-03-12T06:36:15.058Z INFO: Server is running on port localhost:8080
+2025-03-12T06:36:16.488Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:36:16.490Z ERROR: unrecognized_keys
+2025-03-12T06:37:00.412Z INFO: Server is running on port localhost:8080
+2025-03-12T06:37:15.225Z INFO: Server is running on port localhost:8080
+2025-03-12T06:37:16.942Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:37:16.950Z ERROR: unrecognized_keys
+2025-03-12T06:40:49.155Z INFO: Server is running on port localhost:8080
+2025-03-12T06:42:26.403Z INFO: GET /category?kdjaksjdkas=kjdkas
+2025-03-12T06:42:26.406Z ERROR: unrecognized_keys
+2025-03-12T06:42:31.347Z INFO: GET /category
+2025-03-12T06:46:56.544Z INFO: Server is running on port localhost:8080
+2025-03-12T06:47:32.328Z INFO: Server is running on port localhost:8080
+2025-03-12T06:49:07.878Z INFO: Server is running on port localhost:8080
+2025-03-12T06:49:19.074Z INFO: Server is running on port localhost:8080
+2025-03-12T06:50:13.303Z INFO: Server is running on port localhost:8080
+2025-03-12T06:50:19.512Z INFO: Server is running on port localhost:8080
+2025-03-12T06:50:26.162Z INFO: Server is running on port localhost:8080
+2025-03-12T06:50:34.739Z INFO: Server is running on port localhost:8080
+2025-03-12T06:50:39.651Z INFO: GET /category
+2025-03-12T06:50:46.752Z INFO: GET /category?klkd=dlasjdl
+2025-03-12T06:50:46.754Z ERROR: Validation Error:
+2025-03-12T06:50:58.288Z INFO: POST /category
+2025-03-12T06:51:02.361Z INFO: POST /category
+2025-03-12T06:51:13.937Z INFO: GET /category
+2025-03-12T06:51:30.025Z INFO: Server is running on port localhost:8080
+2025-03-12T06:51:35.063Z INFO: GET /category
+2025-03-12T06:51:38.087Z INFO: POST /category
+2025-03-12T06:51:38.090Z ERROR: Validation Error:
+2025-03-12T06:51:48.116Z INFO: Server is running on port localhost:8080
+2025-03-12T06:52:02.595Z INFO: GET /category
+2025-03-12T06:52:17.647Z INFO: PUT /category/67d12ed60a4342929dd8f35c
+2025-03-12T06:52:17.649Z ERROR: Validation Error:
+2025-03-12T06:52:30.925Z INFO: PUT /category/67d12ed60a4342929dd8f35c
+2025-03-12T06:52:30.926Z ERROR: Validation Error:
+2025-03-12T06:52:44.965Z INFO: Server is running on port localhost:8080
+2025-03-13T05:42:15.253Z INFO: Server is running on port localhost:8080
+2025-03-13T05:43:06.273Z INFO: GET /product
+2025-03-13T05:43:06.275Z ERROR: Validation Error:
+2025-03-13T05:43:12.618Z INFO: GET /product
+2025-03-13T05:43:12.619Z ERROR: Validation Error:
+2025-03-13T05:44:11.235Z INFO: Server is running on port localhost:8080
+2025-03-13T05:44:33.203Z INFO: GET /category
+2025-03-13T05:44:56.082Z INFO: Server is running on port localhost:8080
+2025-03-13T05:45:03.695Z INFO: GET /product
+2025-03-13T05:46:36.803Z INFO: GET /product
+2025-03-13T05:48:06.575Z INFO: Server is running on port localhost:8080
+2025-03-13T05:52:20.466Z INFO: Server is running on port localhost:8080
+2025-03-13T05:52:21.115Z INFO: GET /product
+2025-03-13T05:52:40.965Z INFO: Server is running on port localhost:8080
+2025-03-13T05:52:52.339Z INFO: Server is running on port localhost:8080
+2025-03-13T05:53:12.352Z INFO: Server is running on port localhost:8080
+2025-03-13T05:53:18.827Z INFO: Server is running on port localhost:8080
+2025-03-13T05:53:23.383Z INFO: GET /product
+2025-03-13T05:53:29.417Z INFO: GET /product/67d2713819092b22d3b379a9
+2025-03-13T05:53:58.389Z INFO: Server is running on port localhost:8080
+2025-03-13T05:54:29.850Z INFO: Server is running on port localhost:8080
+2025-03-13T05:54:55.238Z INFO: Server is running on port localhost:8080
+2025-03-13T05:55:41.708Z INFO: Server is running on port localhost:8080
+2025-03-13T05:55:42.992Z INFO: GET /product/67d2713819092b22d3b379a9
+2025-03-13T05:55:55.362Z INFO: GET /product
+2025-03-13T05:56:02.822Z INFO: Server is running on port localhost:8080
+2025-03-13T05:56:53.753Z INFO: Server is running on port localhost:8080
+2025-03-13T05:58:40.217Z INFO: Server is running on port localhost:8080
+2025-03-13T05:58:44.430Z INFO: GET /product
+2025-03-13T05:58:48.627Z INFO: GET /product/67d2713819092b22d3b379a9
+2025-03-13T05:59:18.636Z INFO: Server is running on port localhost:8080
+2025-03-13T06:00:03.143Z INFO: Server is running on port localhost:8080
+2025-03-13T07:38:31.690Z INFO: Server is running on port localhost:8080
+2025-03-13T07:38:38.415Z INFO: GET /category
+2025-03-13T07:39:05.465Z INFO: Server is running on port localhost:8080
+2025-03-13T07:39:06.050Z INFO: GET /category
+2025-03-13T07:39:19.662Z INFO: GET /category/67d285980ca090c52080d9df
+2025-03-13T07:39:22.994Z INFO: GET /category/
+2025-03-13T07:39:24.346Z INFO: GET /category
+2025-03-13T07:41:54.404Z INFO: POST /product
+2025-03-13T07:43:48.201Z INFO: POST /product
+2025-03-13T08:11:42.411Z INFO: Server is running on port localhost:8080
+2025-03-13T08:11:45.600Z INFO: POST /product
+2025-03-13T08:12:36.852Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:07.375Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:13.315Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:19.263Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:23.574Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:40.347Z INFO: Server is running on port localhost:8080
+2025-03-13T08:14:44.285Z INFO: Server is running on port localhost:8080
+2025-03-13T08:16:18.806Z INFO: Server is running on port localhost:8080
+2025-03-13T08:18:55.574Z INFO: Server is running on port localhost:8080
+2025-03-13T08:19:12.444Z INFO: Server is running on port localhost:8080
+2025-03-13T08:19:19.818Z INFO: Server is running on port localhost:8080
+2025-03-13T08:19:39.911Z INFO: Server is running on port localhost:8080
+2025-03-13T08:19:59.025Z INFO: Server is running on port localhost:8080
+2025-03-13T08:28:12.883Z INFO: Server is running on port localhost:8080
+2025-03-13T08:28:20.118Z INFO: Server is running on port localhost:8080
+2025-03-13T08:28:29.506Z INFO: GET /product
+2025-03-13T08:28:55.552Z INFO: Server is running on port localhost:8080
+2025-03-13T08:29:12.193Z INFO: Server is running on port localhost:8080
+2025-03-13T08:29:23.418Z INFO: GET /product
+2025-03-13T08:29:33.653Z INFO: Server is running on port localhost:8080
+2025-03-13T08:29:43.425Z INFO: Server is running on port localhost:8080
+2025-03-13T08:29:45.014Z INFO: GET /product
+2025-03-13T08:30:02.372Z INFO: Server is running on port localhost:8080
+2025-03-13T08:30:03.088Z INFO: GET /product
+2025-03-13T08:58:33.556Z INFO: Server is running on port localhost:8080
+2025-03-13T08:58:36.977Z INFO: Server is running on port localhost:8080
+2025-03-13T08:58:49.600Z INFO: Server is running on port localhost:8080
+2025-03-13T08:58:55.079Z INFO: Server is running on port localhost:8080
+2025-03-13T09:01:38.336Z INFO: Server is running on port localhost:8080
+2025-03-13T09:01:45.646Z INFO: Server is running on port localhost:8080
+2025-03-13T09:01:46.473Z INFO: GET /product
+2025-03-13T09:15:49.310Z INFO: Server is running on port localhost:8080
+2025-03-13T09:15:52.077Z INFO: GET /product
+2025-03-13T09:16:06.216Z INFO: POST /product
+2025-03-13T09:16:06.219Z ERROR: Validation Error:
+2025-03-13T09:17:04.944Z INFO: Server is running on port localhost:8080
+2025-03-13T09:17:14.799Z INFO: Server is running on port localhost:8080
+2025-03-13T09:17:28.754Z INFO: Server is running on port localhost:8080
+2025-03-13T09:17:39.204Z INFO: Server is running on port localhost:8080
+2025-03-13T09:17:47.566Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:01.531Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:17.578Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:27.218Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:33.673Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:41.698Z INFO: Server is running on port localhost:8080
+2025-03-13T09:18:57.534Z INFO: Server is running on port localhost:8080
+2025-03-13T09:19:08.629Z INFO: Server is running on port localhost:8080
+2025-03-13T09:19:36.528Z INFO: Server is running on port localhost:8080
+2025-03-13T09:19:53.070Z INFO: Server is running on port localhost:8080
+2025-03-13T09:20:01.504Z INFO: Server is running on port localhost:8080
+2025-03-13T09:20:12.300Z INFO: Server is running on port localhost:8080
+2025-03-13T09:20:32.152Z INFO: Server is running on port localhost:8080
+2025-03-13T09:20:44.215Z INFO: Server is running on port localhost:8080
+2025-03-13T09:20:48.583Z INFO: POST /product
+2025-03-13T09:20:48.585Z ERROR: Validation Error:
+2025-03-13T09:21:10.208Z INFO: POST /product
+2025-03-13T09:21:17.210Z INFO: GET /product
+2025-03-13T09:48:45.379Z INFO: Server is running on port localhost:8080
+2025-03-13T09:48:59.199Z INFO: GET /product
+2025-03-13T09:49:49.807Z INFO: POST /category
+2025-03-13T09:49:51.376Z INFO: POST /category
+2025-03-13T09:49:54.785Z INFO: POST /category
+2025-03-13T09:49:57.451Z INFO: POST /category
+2025-03-13T09:49:57.453Z ERROR: Validation Error:
+2025-03-13T09:50:01.373Z INFO: POST /category
+2025-03-13T09:50:06.043Z INFO: POST /category
+2025-03-13T09:50:07.458Z INFO: POST /category
+2025-03-13T09:50:12.404Z INFO: GET /category
+2025-03-13T09:50:59.482Z INFO: GET /prod
+2025-03-13T09:50:59.483Z ERROR: Route : /prod is not a valid
+2025-03-13T09:51:02.704Z INFO: GET /product
+2025-03-13T09:53:26.813Z INFO: POST /product
+2025-03-13T09:55:33.505Z INFO: POST /product
+2025-03-13T09:55:37.025Z INFO: GET /product
+2025-03-13T09:56:02.594Z INFO: Server is running on port localhost:8080
+2025-03-13T09:56:04.115Z INFO: GET /product
+2025-03-13T09:56:17.663Z INFO: Server is running on port localhost:8080
+2025-03-13T09:56:54.866Z INFO: Server is running on port localhost:8080
+2025-03-13T09:56:57.454Z INFO: GET /product
+2025-03-13T09:57:02.987Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T09:57:19.678Z INFO: Server is running on port localhost:8080
+2025-03-13T09:57:29.952Z INFO: Server is running on port localhost:8080
+2025-03-13T09:57:30.616Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T09:58:40.021Z INFO: Server is running on port localhost:8080
+2025-03-13T09:59:07.821Z INFO: Server is running on port localhost:8080
+2025-03-13T09:59:36.144Z INFO: Server is running on port localhost:8080
+2025-03-13T09:59:38.009Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T09:59:42.033Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T09:59:52.777Z INFO: Server is running on port localhost:8080
+2025-03-13T09:59:52.958Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T10:00:56.920Z INFO: Server is running on port localhost:8080
+2025-03-13T10:01:44.654Z INFO: Server is running on port localhost:8080
+2025-03-13T10:01:49.997Z INFO: Server is running on port localhost:8080
+2025-03-13T10:02:28.330Z INFO: Server is running on port localhost:8080
+2025-03-13T10:02:30.070Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T10:02:43.683Z INFO: Server is running on port localhost:8080
+2025-03-13T10:02:46.427Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T10:03:00.803Z INFO: Server is running on port localhost:8080
+2025-03-13T10:03:02.541Z INFO: GET /product/67d2ab9544ad2d05d8568a27
+2025-03-13T10:03:17.519Z INFO: Server is running on port localhost:8080
+2025-03-13T10:04:25.562Z INFO: Server is running on port localhost:8080
+2025-03-13T10:04:37.698Z INFO: Server is running on port localhost:8080
+2025-03-13T10:04:39.659Z INFO: GET /product/67d2ab9544ad2d05d8568a27
