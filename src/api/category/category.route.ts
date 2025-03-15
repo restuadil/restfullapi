@@ -1,15 +1,14 @@
 import { Router } from "express";
 import { CategoryController } from "./category.controller";
 import { validateIdMiddleware } from "../../middleware/id.middleware";
-import { CategoryValidation } from "./category.validation";
 
 export const CategoryRouter = Router();
-CategoryRouter.get("/category", CategoryController.get);
+CategoryRouter.get("/category", CategoryController.getAll);
 CategoryRouter.post("/category", CategoryController.create);
 CategoryRouter.get(
   "/category/:id",
   validateIdMiddleware,
-  CategoryController.get
+  CategoryController.getById
 );
 CategoryRouter.put(
   "/category/:id",
