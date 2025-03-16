@@ -5,7 +5,7 @@ export const CategoryController = {
   getAll: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.get(req.query);
-      sendResponse(res, 200, response, "Success retrived all categories");
+      sendResponse(res, 200, response, "success retrived all categories");
     } catch (error) {
       next(error);
     }
@@ -13,7 +13,7 @@ export const CategoryController = {
   getById: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.getById(req.params.id);
-      sendResponse(res, 200, response, "Success retrieving category");
+      sendResponse(res, 200, response, "success retrieving category");
     } catch (error) {
       next(error);
     }
@@ -21,7 +21,7 @@ export const CategoryController = {
   create: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.create(req.body);
-      sendResponse(res, 201, response, "Success Created Category");
+      sendResponse(res, 201, response, "success Created Category");
     } catch (error) {
       next(error);
     }
@@ -29,7 +29,7 @@ export const CategoryController = {
   update: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.update(req.params.id, req.body);
-      sendResponse(res, 200, response, "Success Update Category");
+      sendResponse(res, 200, response, "success Update Category");
     } catch (error) {
       next(error);
     }
@@ -37,7 +37,7 @@ export const CategoryController = {
   delete: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.delete(req.params.id);
-      sendResponse(res, 200, response, "Success Delete Cateogory");
+      sendResponse(res, 200, response, "success Delete Cateogory");
     } catch (error) {
       next(error);
     }
