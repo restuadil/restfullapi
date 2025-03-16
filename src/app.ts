@@ -17,6 +17,6 @@ app.use(logMiddleware);
 app.use(CategoryRouter);
 app.use(ProductRouter);
 
-app.use(errorMiddleware);
 app.use(routeMiddleware);
+app.use(errorMiddleware);
 export default app;
