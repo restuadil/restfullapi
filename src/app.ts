@@ -4,6 +4,7 @@ import { routeMiddleware } from "./middleware/route.middleware";
 import { errorMiddleware } from "./middleware/error.middleware";
 import { CategoryRouter } from "./api/category/category.route";
 import { ProductRouter } from "./api/product/product.route";
+import { UserRouter } from "./api/user/user.route";
 
 const app: Application = express();
 
@@ -16,6 +17,7 @@ app.use(logMiddleware);
 //can declare routing here
 app.use(CategoryRouter);
 app.use(ProductRouter);
+app.use(UserRouter);
 
 app.use(routeMiddleware);
 app.use(errorMiddleware);
