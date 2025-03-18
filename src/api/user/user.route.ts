@@ -1,18 +1,18 @@
 import { Router } from "express";
 import { validateIdMiddleware } from "../../middleware/id.middleware";
 import { UserController } from "./user.controller";
+import { authorizationMiddleware } from "../../middleware/auth.middleware";
+import { roleMiddleware } from "../../middleware/role.middleware";
 
 export const UserRouter = Router();
-UserRouter.get("/user", UserController.getAll);
-UserRouter.get("/user/:id", validateIdMiddleware, UserController.getById);
-UserRouter.get("/user/:id", validateIdMiddleware, UserController.getById);
-UserRouter.put("/user/:id", validateIdMiddleware, UserController.update);
-UserRouter.delete("/user/:id", validateIdMiddleware, UserController.delete);
+UserRouter.use(authorizationMiddleware);
 
-UserRouter.post("/user/register", UserController.create);
-UserRouter.post("/user/login", UserController.login);
-UserRouter.put(
-  "/user/reset-password/:id",
-  validateIdMiddleware,
-  UserController.resetPassword
+UserRouter.route("/users").get(
+  roleMiddleware(["ADMIN"]),
+  UserController.getAll
 );
+
+UserRouter.route("/users/:id")
+  .all(validateIdMiddleware)
+  .put(UserController.update)
+  .delete(UserController.delete);
