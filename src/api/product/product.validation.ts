@@ -17,8 +17,7 @@ export const ProductValidation = {
     categoryIds: z
       .string()
       .regex(/^[0-9a-fA-F]{24}$/, { message: "Invalid category ID format" })
-      .array()
-      .optional(),
+      .array(),
   }),
   UPDATE: z.object({
     name: z.string().min(1).max(50).optional(),
@@ -26,7 +25,10 @@ export const ProductValidation = {
     price: z.number().min(0).optional(),
     stock: z.number().min(0).optional(),
     images: z.string().array().optional(),
-    categoryId: z.string().optional(),
+    categoryIds: z
+      .string()
+      .regex(/^[0-9a-fA-F]{24}$/, { message: "Invalid category ID format" })
+      .array(),
   }),
   QUERY: z.object({
     search: z.string().optional(),

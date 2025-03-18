@@ -1,32 +1,19 @@
 import { NextFunction, Request, Response } from "express";
 import { CategoryService } from "./category.service";
+import { sendResponse } from "../../utils/sendResponse";
 export const CategoryController = {
-  get: async (req: Request, res: Response, next: NextFunction) => {
+  getAll: async (req: Request, res: Response, next: NextFunction) => {
     try {
-      if (req.params.id) {
-        const response = await CategoryService.getById(req.params.id);
-        res.status(200).json({
-          status: true,
-          statusCode: 200,
-          data: response,
-        });
-      } else if (req.query) {
-        const response = await CategoryService.get(req.query);
-        res.status(200).json({
-          status: true,
-          statusCode: 200,
-          data: response.response,
-          pagination: response.pagination,
-        });
-      } else {
-        const response = await CategoryService.get();
-        res.status(200).json({
-          status: true,
-          statusCode: 200,
-          data: response.response,
-          pagination: response.pagination,
-        });
-      }
+      const response = await CategoryService.get(req.query);
+      sendResponse(res, 200, response, "success retrived all categories");
+    } catch (error) {
+      next(error);
+    }
+  },
+  getById: async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const response = await CategoryService.getById(req.params.id);
+      sendResponse(res, 200, response, "success retrieving category");
     } catch (error) {
       next(error);
     }
@@ -34,11 +21,7 @@ export const CategoryController = {
   create: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.create(req.body);
-      res.status(201).json({
-        status: true,
-        statusCode: 201,
-        data: response,
-      });
+      sendResponse(res, 201, response, "success Created Category");
     } catch (error) {
       next(error);
     }
@@ -46,11 +29,7 @@ export const CategoryController = {
   update: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.update(req.params.id, req.body);
-      res.status(200).json({
-        status: true,
-        statusCode: 200,
-        data: response,
-      });
+      sendResponse(res, 200, response, "success Update Category");
     } catch (error) {
       next(error);
     }
@@ -58,11 +37,7 @@ export const CategoryController = {
   delete: async (req: Request, res: Response, next: NextFunction) => {
     try {
       const response = await CategoryService.delete(req.params.id);
-      res.status(200).json({
-        status: true,
-        statusCode: 200,
-        data: response,
-      });
+      sendResponse(res, 200, response, "success Delete Cateogory");
     } catch (error) {
       next(error);
     }

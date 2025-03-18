@@ -38,12 +38,20 @@ export const errorMiddleware = (
         message: `Validation Error: ${errorMessages.join("; ")}`,
       });
     }
-  } else if (error instanceof Prisma.PrismaClientUnknownRequestError) {
-    res.status(500).json({
-      success: false,
-      statusCode: 500,
-      message: `Database Error : ${JSON.stringify(error.message)}`,
-    });
+  } else if (error instanceof Prisma.PrismaClientKnownRequestError) {
+    if (error.code === "P2002") {
+      res.status(400).json({
+        success: false,
+        statusCode: 400,
+        message: "Name already exists. Please choose a different name.",
+      });
+    } else {
+      res.status(500).json({
+        success: false,
+        statusCode: 500,
+        message: `Database Error : ${JSON.stringify(error.message)}`,
+      });
+    }
   } else if (error instanceof ResponseError) {
     res.status(500).json({
       success: false,
