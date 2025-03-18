@@ -1,10 +1,12 @@
-import { compareSync, genSaltSync, hashSync } from "bcrypt-ts";
-export const hashing = (password: string): string => {
-  const salt = genSaltSync(10);
-  const hash = hashSync(password, salt);
-  return hash;
+import { hash, compare } from "bcrypt-ts";
+import { env } from "../config/env";
+export const hashing = async (password: string): Promise<string> => {
+  return await hash(password, env.BCRYPT_SALT);
 };
 
-export const compare = (password: string, hash: string): boolean => {
-  return compareSync(password, hash);
+export const comparePassword = async (
+  password: string,
+  hash: string
+): Promise<boolean> => {
+  return await compare(password, hash);
 };
