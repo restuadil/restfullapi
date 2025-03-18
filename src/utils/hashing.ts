@@ -1,4 +1,4 @@
-import { hash, compare } from "bcrypt-ts";
+import { hash, compare } from "bcrypt";
 import { env } from "../config/env";
 export const hashing = async (password: string): Promise<string> => {
   return await hash(password, env.BCRYPT_SALT);
